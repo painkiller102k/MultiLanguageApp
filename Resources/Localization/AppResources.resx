@@ -98,19 +98,19 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="GreetingText">
-		<value>Hello, World!</value>
+	<data name="CSharpDesc">
+		<value>C# is a modern object-oriented language developed by Microsoft</value>
 	</data>
-	<data name="ChangeLanguage">
-		<value>Change Language</value>
+	<data name="PythonDesc">
+		<value>Python is simple and great for automation and data science</value>
 	</data>
-	<data name="EnglishButton">
-		<value>English</value>
+	<data name="JSDesc">
+		<value>JavaScript is the main language of web development</value>
 	</data>
-	<data name="RussianButton">
-		<value>Russian</value>
+	<data name="JavaDesc">
+		<value>Java is a cross-platform enterprise language</value>
 	</data>
-	<data name="EstonianButton">
-		<value>Estonian</value>
+	<data name="CppDesc">
+		<value>C++ is a high-performance systems language</value>
 	</data>
 </root>

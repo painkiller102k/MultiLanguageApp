@@ -1,14 +1,15 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MultiLanguageApp.Services;
 
-namespace MultiLanguageApp
+namespace MultiLanguageApp;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
-            MainPage = new AppShell();
-        }
+        InitializeComponent();
 
+        LanguageService.Init(); // 🔥 восстановление языка
+
+        MainPage = new AppShell();
     }
 }

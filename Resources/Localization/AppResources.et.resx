@@ -98,19 +98,19 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="GreetingText">
-		<value>Tere, maailm!</value>
+	<data name="CSharpDesc">
+		<value>C# on kaasaegne objektorienteeritud keel Microsoftilt</value>
 	</data>
-	<data name="ChangeLanguage">
-		<value>Muuda keelt</value>
+	<data name="PythonDesc">
+		<value>Python on lihtne keel andmetöötluseks ja automatiseerimiseks</value>
 	</data>
-	<data name="EnglishButton">
-		<value>Inglise</value>
+	<data name="JSDesc">
+		<value>JavaScript on veebiarenduse põhikeel</value>
 	</data>
-	<data name="RussianButton">
-		<value>Vene</value>
+	<data name="JavaDesc">
+		<value>Java on platvormist sõltumatu programmeerimiskeel</value>
 	</data>
-	<data name="EstonianButton">
-		<value>Eesti</value>
+	<data name="CppDesc">
+		<value>C++ on kiire ja võimas süsteemikeel</value>
 	</data>
 </root>

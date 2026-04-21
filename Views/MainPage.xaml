@@ -1,104 +1,103 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:MultiLanguageApp.ViewModels"
              x:Class="MultiLanguageApp.MainPage">
-
-    <ContentPage.BindingContext>
-        <vm:MainViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#1e3c72" Offset="0.0" />
-            <GradientStop Color="#2a5298" Offset="1.0" />
+            <GradientStop Color="#0B1320" Offset="0.0"/>
+            <GradientStop Color="#1C2541" Offset="0.5"/>
+            <GradientStop Color="#3A506B" Offset="1.0"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <VerticalStackLayout Padding="30" Spacing="30">
+    <VerticalStackLayout Padding="20" Spacing="18">
 
-        <Label Text="{Binding Greeting}" 
-               FontSize="34"
-               TextColor="White"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+        <CarouselView x:Name="LanguageCarousel"
+                      HeightRequest="540"
+                      Loop="True">
 
-        <Label Text="{Binding ChangeLanguageLabel}" 
-               FontSize="18"
-               TextColor="White"
-               Opacity="0.8"
-               HorizontalOptions="Center" />
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
 
-        <VerticalStackLayout Spacing="15">
+                    <Frame CornerRadius="28"
+                           Margin="15"
+                           Padding="0"
+                           HasShadow="True"
+                           BackgroundColor="#FFFFFFEE">
 
-            <!-- 🇬🇧 English -->
-            <Frame CornerRadius="20"
-                   HasShadow="True"
-                   BackgroundColor="White">
+                        <Frame.Shadow>
+                            <Shadow Brush="Black"
+                                    Opacity="0.25"
+                                    Radius="20"
+                                    Offset="0,12"/>
+                        </Frame.Shadow>
 
-                <Grid Padding="15">
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetEnglishCommand}" />
-                    </Grid.GestureRecognizers>
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCardTapped"/>
+                            </Grid.GestureRecognizers>
 
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
-                        <Image Source="flag_en.png"
-                               HeightRequest="85"
-                               WidthRequest="85"/>
+                            <VerticalStackLayout Spacing="12">
 
-                        <Label Text="{Binding EnglishButton}"
-                               FontSize="18"
-                               TextColor="Black"
-                               VerticalOptions="Center"/>
-                    </HorizontalStackLayout>
-                </Grid>
-            </Frame>
+                                <Image Source="{Binding ImageUrl}"
+                                       HeightRequest="260"
+                                       Aspect="AspectFill"/>
 
-            <!-- 🇷🇺 Russian -->
-            <Frame CornerRadius="20"
-                   HasShadow="True"
-                   BackgroundColor="White">
+                                <VerticalStackLayout Padding="18" Spacing="8">
 
-                <Grid Padding="15">
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetRussianCommand}" />
-                    </Grid.GestureRecognizers>
+                                    <Label Text="{Binding Title}"
+                                           FontSize="26"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           TextColor="#1B1B1B"/>
 
-                    <HorizontalStackLayout Spacing="15">
-                        <Image Source="flag_ru.png"
-                               HeightRequest="85"
-                               WidthRequest="85"/>
+                                    <Label Text="{Binding Description}"
+                                           FontSize="14"
+                                           Opacity="0.75"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#444"/>
 
-                        <Label Text="{Binding RussianButton}"
-                               FontSize="18"
-                               TextColor="Black"/>
-                    </HorizontalStackLayout>
-                </Grid>
-            </Frame>
+                                </VerticalStackLayout>
 
-            <!-- 🇪🇪 Estonian -->
-            <Frame CornerRadius="20"
-                   HasShadow="True"
-                   BackgroundColor="White">
+                            </VerticalStackLayout>
 
-                <Grid Padding="15">
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetEstonianCommand}" />
-                    </Grid.GestureRecognizers>
+                        </Grid>
+                    </Frame>
 
-                    <HorizontalStackLayout Spacing="15">
-                        <Image Source="flag_et.png"
-                               HeightRequest="85"
-                               WidthRequest="85"/>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
 
-                        <Label Text="{Binding EstonianButton}"
-                               FontSize="18"
-                               TextColor="Black"/>
-                    </HorizontalStackLayout>
-                </Grid>
-            </Frame>
+        </CarouselView>
 
-        </VerticalStackLayout>
+        <IndicatorView x:Name="Indicator"
+                       IndicatorColor="#8FA3BF"
+                       SelectedIndicatorColor="#FFFFFF"
+                       HorizontalOptions="Center"/>
+
+        <HorizontalStackLayout Spacing="16"
+                               HorizontalOptions="Center"
+                               Margin="0,10,0,0">
+
+            <Button Text="EN"
+                    WidthRequest="140"
+                    HeightRequest="45"
+                    BackgroundColor="#4CC9F0"
+                    TextColor="White"
+                    CornerRadius="22"
+                    FontAttributes="Bold"
+                    Clicked="SetEnglish"/>
+
+            <Button Text="ET"
+                    WidthRequest="140"
+                    HeightRequest="45"
+                    BackgroundColor="#4361EE"
+                    TextColor="White"
+                    CornerRadius="22"
+                    FontAttributes="Bold"
+                    Clicked="SetEstonian"/>
+
+        </HorizontalStackLayout>
 
     </VerticalStackLayout>
+
 </ContentPage>

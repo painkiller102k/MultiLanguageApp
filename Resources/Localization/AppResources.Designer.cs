@@ -61,47 +61,47 @@ namespace MultiLanguageApp.Resources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Change Language.
+        ///   Looks up a localized string similar to C++ is a high-performance systems language.
         /// </summary>
-        internal static string ChangeLanguage {
+        internal static string CppDesc {
             get {
-                return ResourceManager.GetString("ChangeLanguage", resourceCulture);
+                return ResourceManager.GetString("CppDesc", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to English.
+        ///   Looks up a localized string similar to C# is a modern object-oriented language developed by Microsoft.
         /// </summary>
-        internal static string EnglishButton {
+        internal static string CSharpDesc {
             get {
-                return ResourceManager.GetString("EnglishButton", resourceCulture);
+                return ResourceManager.GetString("CSharpDesc", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Estonian.
+        ///   Looks up a localized string similar to Java is a cross-platform enterprise language.
         /// </summary>
-        internal static string EstonianButton {
+        internal static string JavaDesc {
             get {
-                return ResourceManager.GetString("EstonianButton", resourceCulture);
+                return ResourceManager.GetString("JavaDesc", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello, World!.
+        ///   Looks up a localized string similar to JavaScript is the main language of web development.
         /// </summary>
-        internal static string GreetingText {
+        internal static string JSDesc {
             get {
-                return ResourceManager.GetString("GreetingText", resourceCulture);
+                return ResourceManager.GetString("JSDesc", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Russian.
+        ///   Looks up a localized string similar to Python is simple and great for automation and data science.
         /// </summary>
-        internal static string RussianButton {
+        internal static string PythonDesc {
             get {
-                return ResourceManager.GetString("RussianButton", resourceCulture);
+                return ResourceManager.GetString("PythonDesc", resourceCulture);
             }
         }
     }
