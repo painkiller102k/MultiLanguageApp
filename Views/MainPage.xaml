@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MultiLanguageApp.ViewModels"
+             x:Class="MultiLanguageApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#1e3c72" Offset="0.0" />
+            <GradientStop Color="#2a5298" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="30" Spacing="30">
+
+        <Label Text="{Binding Greeting}" 
+               FontSize="34"
+               TextColor="White"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="{Binding ChangeLanguageLabel}" 
+               FontSize="18"
+               TextColor="White"
+               Opacity="0.8"
+               HorizontalOptions="Center" />
+
+        <VerticalStackLayout Spacing="15">
+
+            <!-- 🇬🇧 English -->
+            <Frame CornerRadius="20"
+                   HasShadow="True"
+                   BackgroundColor="White">
+
+                <Grid Padding="15">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SetEnglishCommand}" />
+                    </Grid.GestureRecognizers>
+
+                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                        <Image Source="flag_en.png"
+                               HeightRequest="85"
+                               WidthRequest="85"/>
+
+                        <Label Text="{Binding EnglishButton}"
+                               FontSize="18"
+                               TextColor="Black"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- 🇷🇺 Russian -->
+            <Frame CornerRadius="20"
+                   HasShadow="True"
+                   BackgroundColor="White">
+
+                <Grid Padding="15">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SetRussianCommand}" />
+                    </Grid.GestureRecognizers>
+
+                    <HorizontalStackLayout Spacing="15">
+                        <Image Source="flag_ru.png"
+                               HeightRequest="85"
+                               WidthRequest="85"/>
+
+                        <Label Text="{Binding RussianButton}"
+                               FontSize="18"
+                               TextColor="Black"/>
+                    </HorizontalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- 🇪🇪 Estonian -->
+            <Frame CornerRadius="20"
+                   HasShadow="True"
+                   BackgroundColor="White">
+
+                <Grid Padding="15">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SetEstonianCommand}" />
+                    </Grid.GestureRecognizers>
+
+                    <HorizontalStackLayout Spacing="15">
+                        <Image Source="flag_et.png"
+                               HeightRequest="85"
+                               WidthRequest="85"/>
+
+                        <Label Text="{Binding EstonianButton}"
+                               FontSize="18"
+                               TextColor="Black"/>
+                    </HorizontalStackLayout>
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
