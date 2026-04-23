@@ -26,10 +26,10 @@ public partial class MainPage : ContentPage
 
         items = new ObservableCollection<LanguageItem>
         {
-            new() { Title="C#", DescriptionKey="CSharpDesc", ImageUrl="csharp.png", CommandText="Console.WriteLine(\"Martin töö\");" },
-            new() { Title="Python", DescriptionKey="PythonDesc", ImageUrl="python.png", CommandText="print(\"Martin töö\")" },
-            new() { Title="JavaScript", DescriptionKey="JSDesc", ImageUrl="javascript.png", CommandText="console.log('Martin töö');" },
-            new() { Title="Java", DescriptionKey="JavaDesc", ImageUrl="java.png", CommandText="System.out.println(\"Martin töö\");" },
+            new() { Title="C#", DescriptionKey="CSharpDesc", ImageUrl="csharp.png", CommandText="Console.WriteLine(\"Tere! See on Martin\");" },
+            new() { Title="Python", DescriptionKey="PythonDesc", ImageUrl="python.png", CommandText="print(\"Python programmeerimiskeel\")" },
+            new() { Title="JavaScript", DescriptionKey="JSDesc", ImageUrl="javascript.png", CommandText="console.log('JS Tere!');" },
+            new() { Title="Java", DescriptionKey="JavaDesc", ImageUrl="java.png", CommandText="System.out.println(\"Hello World!\");" },
             new() { Title="C++", DescriptionKey="CppDesc", ImageUrl="cpp.png", CommandText="std::cout << \"Martin töö\";" }
         };
 
